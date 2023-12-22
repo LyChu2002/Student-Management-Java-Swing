@@ -133,7 +133,7 @@ public class MonHocDAO {
 
 			Statement st = con.createStatement();
 
-			String sql = "SELECT * FROM MonHoc WHERE TenMH = N'" + condition + "' ";
+			String sql = "SELECT * FROM MonHoc WHERE TenMH LIKE N'%" + condition + "%' ";
 
 			ResultSet rs = st.executeQuery(sql);
 

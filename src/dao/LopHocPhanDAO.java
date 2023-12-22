@@ -145,7 +145,7 @@ public class LopHocPhanDAO {
 
 			String sql = "SELECT MaLopHP, TenLopHP, LopHocPhan.MaMH, TenMH, TenGV, NgayBatDau, NgayKetThuc, SoTiet "
 					+ "FROM LopHocPhan INNER JOIN MonHoc "
-					+ "ON LopHocPhan.MaMH = MonHoc.MaMH WHERE TenMH = N'" + condition + "'";
+					+ "ON LopHocPhan.MaMH = MonHoc.MaMH WHERE TenMH LIKE N'%" + condition + "%'";
 
 			ResultSet rs = st.executeQuery(sql);
 			while (rs.next()) {
